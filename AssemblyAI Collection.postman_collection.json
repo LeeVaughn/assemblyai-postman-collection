@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "46f7b3a5-cad2-4652-b7f6-73a3b331523c",
+		"name": "AssemblyAI Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Local File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Transfer-Encoding",
+						"value": "chunked",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "https://api.assemblyai.com/v2/upload",
+					"protocol": "https",
+					"host": [
+						"api",
+						"assemblyai",
+						"com"
+					],
+					"path": [
+						"v2",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit FIle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Transfer-Encoding",
+						"value": "chunked",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"audio_url\": \"https://cdn.assemblyai.com/upload/fb24e644-d9ed-4ce1-a10b-1ac2bb595296\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.assemblyai.com/v2/transcript",
+					"protocol": "https",
+					"host": [
+						"api",
+						"assemblyai",
+						"com"
+					],
+					"path": [
+						"v2",
+						"transcript"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Transcript",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.assemblyai.com/v2/transcript/5j2pfvt1z-6feb-4d81-8b19-d62248abe1fc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"assemblyai",
+						"com"
+					],
+					"path": [
+						"v2",
+						"transcript",
+						"5j2pfvt1z-6feb-4d81-8b19-d62248abe1fc"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
